@@ -34,11 +34,11 @@ export class ProductAddComponent implements OnInit {
       this.productService.add(productModel).subscribe(response=>{
         this.toastrService.success(response.message,"Success")
       },response=>{
-        if(response.error.Errors.length>0){
-          for (let i = 0; i <response.error.Errors.length; i++) {
-            this.toastrService.error(response.error.Errors[i].ErrorMessage
-              ,"Validation Error")
-          }       
+        console.log(response.error)
+        if(response.error){
+
+          this.toastrService.error(response.error.message
+            ,"Validation Error")     
         } 
       })
       
