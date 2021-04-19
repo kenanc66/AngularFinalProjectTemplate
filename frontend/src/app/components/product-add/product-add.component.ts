@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormGroup,FormBuilder, FormControl, Validators} from "@angular/forms"
 import { ToastrService } from 'ngx-toastr';
 import { ProductService } from 'src/app/services/product.service';
+import {ErrorModel} from 'src/app/models/errorModel';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./product-add.component.css']
 })
 export class ProductAddComponent implements OnInit {
-
+ 
   productAddForm : FormGroup;
   constructor(private formBuilder:FormBuilder, 
     private productService:ProductService, private toastrService:ToastrService) { }
@@ -36,9 +37,11 @@ export class ProductAddComponent implements OnInit {
       },response=>{
         console.log(response.error)
         if(response.error){
-
-          this.toastrService.error(response.error.message
-            ,"Validation Error")     
+         response.error.Errors.forEach((item:ErrorModel) => {
+           this.toastrService.error(item.ErrorMessage
+            ,"Validation Error")   
+         });
+           
         } 
       })
       
