@@ -1,0 +1,42 @@
+
+	
+<div class="text-center" style="padding:50px 0">
+	<div class="logo">Register</div>
+	<!-- Main Form -->
+	<div class="login-form-1">
+		<form [formGroup]="registerForm" id="register-form" class="text-left">
+			<div class="login-form-main-message"></div>
+			<div class="main-login-form">
+				<div class="login-group">
+					
+					<div class="form-group">
+						<label for="reg_email" class="sr-only">Email</label>
+						<input  formControlName="email" type="text" class="form-control" id="reg_email" name="reg_email" placeholder="email">
+					</div>
+					<div class="form-group">
+						<label for="reg_password" class="sr-only">Password</label>
+						<input formControlName="password" type="password" class="form-control" id="reg_password" name="reg_password" placeholder="password">
+					</div>
+					<div class="form-group">
+						<label for="reg_fullname" class="sr-only">First Name</label>
+						<input formControlName="firstName" type="text" class="form-control" id="firstName" name="reg_fullname" placeholder="full name">
+					</div>
+					<div class="form-group">
+						<label for="reg_fullname" class="sr-only">Last Name</label>
+						<input formControlName="lastName" type="text" class="form-control" id="lastName" name="reg_fullname" placeholder="full name">
+					</div>
+					
+					<div class="form-group login-group-checkbox">
+						<input type="checkbox" class="" id="reg_agree" name="reg_agree">
+						<label for="reg_agree">i agree with <a >terms</a></label>
+					</div>
+				</div>
+				<button (click)="register()" type="submit" class="login-button"><i class="fa fa-chevron-right">Register</i></button>
+			</div>
+			<div class="etc-login-form">
+				<p>already have an account? <a href="#">login here</a></p>
+			</div>
+		</form>
+	</div>
+	<!-- end:Main Form -->
+</div>
