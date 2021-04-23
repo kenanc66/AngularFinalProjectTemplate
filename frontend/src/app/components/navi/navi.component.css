@@ -1,0 +1,9 @@
+#logoutbtn{
+border: 0;
+background-color: black;
+color: white;
+border-radius: 5px;
+}#logoutbtn:hover{
+    background-color: white;
+color: black;
+}

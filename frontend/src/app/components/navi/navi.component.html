@@ -5,28 +5,32 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 navo">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/login">Login</a>
+            <a class="nav-link rightnav" routerLink="/login">Login</a>
           </li>
           
           
           <li class="nav-item">
-            <a class="nav-link " routerLink="/register">Register</a>
+            <a class="nav-link rightnav " routerLink="/register">Register</a>
           </li>
           <app-cart-summary></app-cart-summary>
           <li class="nav-item">
-            <a class="nav-link " routerLink="/?">Account</a>
+            <a class="nav-link " routerLink="/">Account</a>
           </li>
           <li class="nav-item">
             <a class="nav-link " routerLink="/products/add">Add Product</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link " routerLink="/?">Favourites</a>
+          <li class="nav-item" >
+            
+            <a class="nav-link " id="logoutbtn" (click)="logOut()" routerLink="/login">Log OUT</a>
           </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link " routerLink="/">Favourites</a>
+          </li> -->
         </ul>
         
       </div>
