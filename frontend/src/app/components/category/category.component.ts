@@ -41,7 +41,7 @@ export class CategoryComponent implements OnInit {
     classArrange.forEach((item)=>{
     item.className="category list-group-item"
     })
-    let categoryArrange= document.querySelectorAll(".categoryName");
+    let categoryArrange = document.querySelectorAll(".categoryName");
     categoryArrange.forEach((item)=>{
       item.className="categoryName hidden"
       })

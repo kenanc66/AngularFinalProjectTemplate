@@ -5,7 +5,7 @@
 <div class="mb-3">
   <label for="filterText" class="form-label">Search</label>
   <input type="text" [(ngModel)]="filterText" class="form-control" id="filterText" 
-  placeholder="arama ifadesi giriniz">
+  placeholder="type to search">
 </div>
 <div *ngIf="filterText.length>2" class="alert alert-success">
   {{filterText}} Searched.
