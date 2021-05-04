@@ -22,8 +22,8 @@ export class ProductComponent implements OnInit {
 
   ngOnInit(): void {
       this.activatedRoute.params.subscribe(params=>{
-        if(params["categoryId"]){
-          this.getProductsByCategory(params["categoryId"])
+        if(params["Id"]){
+          this.getProductsByCategory(params["Id"])
         }else{
           this.getProducts()
         }
