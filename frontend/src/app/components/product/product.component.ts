@@ -44,13 +44,13 @@ export class ProductComponent implements OnInit {
     })   
   }
 
-  addToCart(product:Product){
-      if(product.unitsInStock<1){
-        this.toastrService.error("Warning","Lack of Stock")
-      }else{
-        this.toastrService.success(product.productName,"Product added.")
-        this.cartService.addToCart(product);
-      }
+  // addToCart(product:Product){
+  //     if(product.unitsInStock<1){
+  //       this.toastrService.error("Warning","Lack of Stock")
+  //     }else{
+  //       this.toastrService.success(product.productName,"Product added.")
+  //       this.cartService.addToCart(product);
+  //     }
    
-  }
+  // }
 }

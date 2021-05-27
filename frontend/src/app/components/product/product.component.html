@@ -11,7 +11,25 @@
   {{filterText}} Searched.
 </div>
 
-<table *ngIf="dataLoaded==true" class="table">
+<div *ngFor="let product of products" > <div class="card" style="width: 18rem;">
+  <img class="card-img-top card-img" src="{{product.imageUrl}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title" >{{product.recipeName}}</h5>
+    <p class="card-text">{{product.recipeExplanation}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{product.ingredients}}</li>
+    <li class="list-group-item">Ingredients ac facilisis in</li>
+    <li class="list-group-item">Ingredients at eros</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div> </div>
+
+
+<!-- <table *ngIf="dataLoaded==true" class="table">
   <thead>
     <tr>
       <th>Id</th>
@@ -36,21 +54,5 @@
     </tr>
   </tbody>
   
-</table>
-<!-- 
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top card-img" src="..." alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">{{  }}</h5>
-    <p class="card-text">Recipe Explanations</p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Ingredients</li>
-    <li class="list-group-item">Ingredients ac facilisis in</li>
-    <li class="list-group-item">Ingredients at eros</li>
-  </ul>
-  <div class="card-body">
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
-  </div>
-</div> -->
+</table> -->
+

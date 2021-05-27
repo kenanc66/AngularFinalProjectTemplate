@@ -1,7 +1,10 @@
 export interface Product{
-    productId:number;
+    
+    recipeID:number;
+    recipeName:string;
     categoryId:number;
-    productName:string;
-    unitsInStock:number;
-    unitPrice:number;
+    categoryName:string ;
+    recipeExplanation:string; 
+    ingredients:string;
+    imageUrl:string; 
 }

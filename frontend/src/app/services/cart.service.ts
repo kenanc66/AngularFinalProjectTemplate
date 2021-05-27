@@ -11,7 +11,7 @@ export class CartService {
   constructor() { }
 
   addToCart(product:Product){
-    let item = CartItems.find(c=>c.product.productId===product.productId);
+    let item = CartItems.find(c=>c.product.recipeID===product.recipeID);
     if(item){
       item.quantity+=1;
     }else{
@@ -23,7 +23,7 @@ export class CartService {
   }
 
   removeFromCart(product:Product){
-    let item:CartItem = CartItems.find(c=>c.product.productId===product.productId);
+    let item:CartItem = CartItems.find(c=>c.product.recipeID===product.recipeID);
     CartItems.splice(CartItems.indexOf(item),1);
   }
 
