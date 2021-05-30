@@ -4,29 +4,30 @@
 
 <div class="mb-3">
   <label for="filterText" class="form-label">Search</label>
-  <input type="text" [(ngModel)]="filterText"  class="form-control" id="filterText" 
-  placeholder="type to search">
+  <input type="text" [(ngModel)]="filterText" class="form-control" id="filterText" placeholder="type to search">
 </div>
 <div *ngIf="filterText.length>2" class="alert alert-success">
   {{filterText}} Searched.
 </div>
 <!-- | filterPipe:filterText -->
-<div *ngFor="let product of products  |ingredient:filterText"  > <div class="card" style="width: 18rem;">
-  <img class="card-img-top card-img" src="{{product.imageUrl}}" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title" >{{product.recipeName}}</h5>
-    <p class="card-text">{{product.recipeExplanation}}</p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">{{product.ingredients}}</li>
-    <li class="list-group-item">Ingredients ac facilisis in</li>
-    <li class="list-group-item">Ingredients at eros</li>
-  </ul>
-  <div class="card-body">
+<div class="">
+  <div *ngFor="let product of products  |ingredient:filterText" class="">
+    <div class="card mb-3" style="width:20rem;">
+      <img class="card-img-top card-img" src="{{product.imageUrl}}" alt="Card image ">
+      <div class="card-body">
+        <h5 class="card-title">{{product.Name}}</h5>
+        <p class="card-text">{{product.recipeExplanation}}</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{product.ingredients}}</li>
+      </ul>
+      <!-- <div class="card-body">
     <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
+    <a href="#" class="card-link">Another link</a> 
+  </div> -->
+    </div>
   </div>
-</div> </div>
+</div>
 
 
 <!-- <table *ngIf="dataLoaded==true" class="table">
@@ -55,4 +56,3 @@
   </tbody>
   
 </table> -->
-

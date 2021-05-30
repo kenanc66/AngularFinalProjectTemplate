@@ -1,9 +1,9 @@
 export interface Product{
     
-    recipeID:number;
-    recipeName:string;
+    Id:number;
+    Name:string;
     categoryId:number;
-    categoryName:string ;
+    categoryName:string;
     recipeExplanation:string; 
     ingredients:string;
     imageUrl:string; 

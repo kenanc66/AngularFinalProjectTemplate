@@ -1,21 +1,21 @@
 <div class="content">
     <div class="col-md-12">
         <div class="card">
-            <div class="card-header"><h5 class="title">Add Product</h5></div>
+            <div class="card-header"><h5 class="title">Add Recipe</h5></div>
             <div class="card-body">
                 <form [formGroup]="productAddForm">
                     <div class="mb-3">
-                        <label for="productName">Product Name</label>
+                        <label for="Name">Recipe Name</label>
                         <div class="form-group">
                             <input type="text" 
-                            id="productName" 
-                            formControlName="productName" class="form-control" 
-                            placeholder="Ürün adı"/>
+                            id="Name" 
+                            formControlName="Name" class="form-control" 
+                            placeholder="Recipe Name"/>
                         </div>
                     </div>
                    
                     <div class="mb-3">
-                        <label for="categoryId">Category</label>
+                        <label for="categoryId">Category    1:Breakfast 2:Meat 3:Salad 4:Soup</label>
                         <div class="form-group">
                             <input type="number" 
                             id="categoryId" 
@@ -24,21 +24,21 @@
                         </div>
                     </div>
                    <div class="mb-3">
-                    <label for="unitsInStock">Units in Stock</label>
+                    <label for="recipeExplanation">Recipe Explanation</label>
                     <div class="form-group">
-                        <input type="number" 
-                        id="unitsInStock" 
-                        formControlName="unitsInStock" class="form-control" 
-                        placeholder="Stok adedi"/>
+                        <input type="text" 
+                        id="recipeExplanation" 
+                        formControlName="recipeExplanation" class="form-control" 
+                        placeholder="Recipe Explanation"/>
                     </div>
                    </div>
                     <div  class="mb-3">
-                        <label for="unitPrice">Price</label>
+                        <label for="ingredients">Ingredients</label>
                         <div class="form-group">
-                            <input type="number" 
-                            id="unitPrice" 
-                            formControlName="unitPrice" class="form-control" 
-                            placeholder="Fiyatı"/>
+                            <input type="text" 
+                            id="ingredients" 
+                            formControlName="ingredients" class="form-control" 
+                            placeholder="içindekiler"/>
                         </div>
                     </div>
                     
