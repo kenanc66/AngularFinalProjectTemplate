@@ -1,7 +1,7 @@
 export interface Product{
     
     Id:number;
-    Name:string;
+    name:string;
     categoryId:number;
     categoryName:string;
     recipeExplanation:string; 

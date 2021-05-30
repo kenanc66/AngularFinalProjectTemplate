@@ -6,6 +6,7 @@
   <label for="filterText" class="form-label">Search</label>
   <input type="text" [(ngModel)]="filterText" class="form-control" id="filterText" placeholder="type to search">
 </div>
+<!-- <button [(ngModel)]="filterText">domates</button> -->
 <div *ngIf="filterText.length>2" class="alert alert-success">
   {{filterText}} Searched.
 </div>
@@ -13,9 +14,9 @@
 <div class="">
   <div *ngFor="let product of products  |ingredient:filterText" class="">
     <div class="card mb-3" style="width:20rem;">
-      <img class="card-img-top card-img" src="{{product.imageUrl}}" alt="Card image ">
+      <img class="card-img-top card-img" src="https://localhost:44396/api/recipes/get/{{product.imageUrl}}" alt="Card image ">
       <div class="card-body">
-        <h5 class="card-title">{{product.Name}}</h5>
+        <h5 class="card-title">{{product.name}}</h5>
         <p class="card-text">{{product.recipeExplanation}}</p>
       </div>
       <ul class="list-group list-group-flush">
