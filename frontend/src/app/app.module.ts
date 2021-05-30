@@ -11,6 +11,7 @@ import { CategoryComponent } from './components/category/category.component';
 import { NaviComponent } from './components/navi/navi.component';
 import { VatAddedPipe } from './pipes/vat-added.pipe';
 import { FilterPipePipe } from './pipes/filter-pipe.pipe';
+import { IngredientPipe } from './pipes/ingredient-pipe.pipe';
 
 import {ToastrModule} from "ngx-toastr";
 import { CartSummaryComponent } from './components/cart-summary/cart-summary.component';
@@ -20,6 +21,7 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { RegisterComponent } from './components/register/register.component';
 import { AccountComponent } from './components/account/account.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +30,7 @@ import { AccountComponent } from './components/account/account.component';
     NaviComponent,
     VatAddedPipe,
     FilterPipePipe,
+    IngredientPipe,
     CartSummaryComponent,
     ProductAddComponent,
     LoginComponent,

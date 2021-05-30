@@ -43,6 +43,7 @@ export class ProductComponent implements OnInit {
       this.dataLoaded = true;
     })   
   }
+  
 
   // addToCart(product:Product){
   //     if(product.unitsInStock<1){

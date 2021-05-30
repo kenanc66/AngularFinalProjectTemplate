@@ -4,14 +4,14 @@
 
 <div class="mb-3">
   <label for="filterText" class="form-label">Search</label>
-  <input type="text" [(ngModel)]="filterText" class="form-control" id="filterText" 
+  <input type="text" [(ngModel)]="filterText"  class="form-control" id="filterText" 
   placeholder="type to search">
 </div>
 <div *ngIf="filterText.length>2" class="alert alert-success">
   {{filterText}} Searched.
 </div>
-
-<div *ngFor="let product of products" > <div class="card" style="width: 18rem;">
+<!-- | filterPipe:filterText -->
+<div *ngFor="let product of products  |ingredient:filterText"  > <div class="card" style="width: 18rem;">
   <img class="card-img-top card-img" src="{{product.imageUrl}}" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title" >{{product.recipeName}}</h5>
