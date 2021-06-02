@@ -1,3 +1,4 @@
+
 <div class="content">
     <div class="col-md-12">
         <div class="card">
@@ -13,16 +14,17 @@
                             placeholder="Recipe Name"/>
                         </div>
                     </div>
-                   
-                    <div class="mb-3">
-                        <label for="categoryId">Category    1:Breakfast 2:Meat 3:Salad 4:Soup</label>
-                        <div class="form-group">
-                            <input type="number" 
-                            id="categoryId" 
-                            formControlName="categoryId" class="form-control" 
-                            placeholder="Kategori"/>
-                        </div>
-                    </div>
+                     <div class="mb-3">
+                        <label for="categoryId">Category</label>
+                         <select name="categoryId" id="select"   class="form-control" formControlName="categoryId">
+                          <option *ngFor="let category of categories" id="{{category.id}}" value="{{category.id}}"  >
+                            {{category.name}}
+                            
+                            </option>
+                         </select>
+                        
+                        </div>    
+                        
                    <div class="mb-3">
                     <label for="recipeExplanation">Recipe Explanation</label>
                     <div class="form-group">
