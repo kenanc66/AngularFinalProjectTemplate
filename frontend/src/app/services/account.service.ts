@@ -16,4 +16,8 @@ export class AccountService {
     
     return this.httpClient.get<AccountItem>(this.apiUrl)
   }
+//   noAccount(){
+//     let emptyAccount=  document.getElementById("#account")
+//     emptyAccount.innerText="You didnt log in.";
+// }
 }
