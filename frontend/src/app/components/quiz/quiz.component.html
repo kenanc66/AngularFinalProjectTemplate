@@ -1,0 +1,33 @@
+<div class="container p-5" >
+    <div class="row">
+        <div class="col-sm-8 offset-2">
+            <p class="text-center">{{currentQuiz +1}} of {{quizzes.length}}</p>
+            <h1>{{quizzes[currentQuiz].question}}</h1>
+            <div *ngIf="totalAnswer<4">
+            <ul class="list-group" *ngFor="let quiz of quizzes[currentQuiz].answer">
+                <label for="">
+                <li class="list-group-item p-2"> 
+                    <input type="radio" name="options" (change)="onAnswer(quiz.correct)" 
+                     >
+                    {{quiz.option}} </li>
+                </label>
+            </ul>
+        </div>
+      <div>  Correct Answers: {{correctAnswer}} // Incorrect Answers: {{incorrectAnswer}}</div>
+            <button  class="btn btn-success -btn-block" 
+            (click)="showResult()" *ngIf="result">Show Results</button>
+           
+            <div >
+                {{resultText}} 
+            </div>
+            <div *ngIf="totalAnswer===4">
+                <img src="https://localhost:44396/api/recipes/get/{{products.imageUrl}}" alt="">
+                <h5 class="card-title">{{products.name}}</h5>
+                <p class="card-text">{{products.recipeExplanation}}</p>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">{{products.ingredients}}</li>
+                  </ul>
+            </div>
+        </div>
+    </div>
+</div>

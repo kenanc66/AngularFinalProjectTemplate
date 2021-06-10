@@ -13,6 +13,7 @@ import { VatAddedPipe } from './pipes/vat-added.pipe';
 import { FilterPipePipe } from './pipes/filter-pipe.pipe';
 import { IngredientPipe } from './pipes/ingredient-pipe.pipe';
 
+
 import {ToastrModule} from "ngx-toastr";
 import { CartSummaryComponent } from './components/cart-summary/cart-summary.component';
 import { ProductAddComponent } from './components/product-add/product-add.component';
@@ -20,6 +21,8 @@ import { LoginComponent } from './components/login/login.component';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { RegisterComponent } from './components/register/register.component';
 import { AccountComponent } from './components/account/account.component';
+import { QuizComponent } from './components/quiz/quiz.component';
+
 
 
 @NgModule({
@@ -35,7 +38,9 @@ import { AccountComponent } from './components/account/account.component';
     ProductAddComponent,
     LoginComponent,
     RegisterComponent,
-    AccountComponent
+    AccountComponent,
+    QuizComponent,
+    
   ],
   imports: [
     BrowserModule,

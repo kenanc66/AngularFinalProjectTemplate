@@ -5,6 +5,8 @@ import { CategoryComponent } from './components/category/category.component';
 import { LoginComponent } from './components/login/login.component';
 import { ProductAddComponent } from './components/product-add/product-add.component';
 import { ProductComponent } from './components/product/product.component';
+import { QuizComponent } from './components/quiz/quiz.component';
+
 import { RegisterComponent } from './components/register/register.component';
 import { LoginGuard } from './guards/login.guard';
 
@@ -15,7 +17,9 @@ const routes: Routes = [
   {path:"products/add", component:ProductAddComponent, canActivate:[LoginGuard]},
   {path:"login", component:LoginComponent},
   {path:"register",component:RegisterComponent},
-  {path:"account",component:AccountComponent}
+  {path:"account",component:AccountComponent},
+  {path:"quiz",component:QuizComponent}
+  
 ];
 
 @NgModule({

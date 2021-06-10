@@ -3,12 +3,13 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "noImplicitAny": false,
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "strictNullChecks": false,
     "strictPropertyInitialization": false,
-    "noImplicitReturns": true,
+    "noImplicitReturns": true,//changed
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
